@@ -8,13 +8,13 @@ public class Vector {
 		String strDatos = "Pepe \n 5.6 \n Juan \n 8.5";
 		int contador=0;
 		String nombre[] = new String[2];
-		
 		double[] nota =new double[2];
 		StringTokenizer tokens=new StringTokenizer(strDatos, "\n");
+		
 		do {
+			
 		nombre[contador] =tokens.nextToken();
 		nota[contador] = Double.parseDouble(tokens.nextToken());
-		
 		
 		contador++;
 	
