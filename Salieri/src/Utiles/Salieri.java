@@ -125,7 +125,46 @@ public class Salieri {
 		
 		return capi;
 	}
+	/**
+	 * Rellena un array con números aleatorios entre 0 y 100
+	 * @param vector Acepta como parámetro un array de enteros
+	 */
 	
+	/**
+	 * Muestra en pantalla el contenido de un vector de numeros enteros
+	 * @param vector Acepta como parámetro un array de enteros.
+	 */
 	
+	public void rellenaVectornum(int[] vector) {
+		 for (int i = 0; i < vector.length; i++) {
+			vector[i]=(int)(Math.random()*101);
+		}
 	}
+	/**
+	 * 
+	 * @param vector Acepta como parámetro un array de enteros
+	 * @param opcion Acepta como parámetro un número entero:
+	 * 				1_Rellena un array con números aleatorios entre 0 y 100.
+	 * 				2_Muestra en pantalla el contenido de un vector de numeros enteros.
+	 */
+	public void vectorUtil(int[] vector,int opcion) {
+		switch (opcion) {
+		case 1:
+			for (int i = 0; i < vector.length; i++) {
+				vector[i]=(int)(Math.random()*101);
+			}
+			
+			break;
+		case 2:
+			for (int i = 0; i < vector.length; i++) {
+				System.out.println(vector[i]);
+			}
+		default:
+			break;
+		}
+			
+		
+	}
+	
+}
 
