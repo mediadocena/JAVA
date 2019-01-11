@@ -8,6 +8,10 @@ public class test {
 		int cap = 1111;
 		System.out.println(ex.invertirString(a));
 		System.out.println(ex.esCapicua(cap));
+		ex.controladouble();
+		ex.controlaentero();
+		ex.controlanegativo();
+		ex.controlapositivo();
 	}
 
 }
