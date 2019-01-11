@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Salieri {
 		Scanner teclado = new Scanner (System.in);
-	Salieri(){
+	public Salieri(){
 		
 	}
 	/**
@@ -141,7 +141,7 @@ public class Salieri {
 		}
 	}
 	/**
-	 * 
+	 * Diversas utilidades para operar con arrays unidimensionales
 	 * @param vector Acepta como parámetro un array de enteros
 	 * @param opcion Acepta como parámetro un número entero:
 	 * 				1_Rellena un array con números aleatorios entre 0 y 100.
@@ -162,9 +162,8 @@ public class Salieri {
 		default:
 			break;
 		}
-			
-		
 	}
+	
 	
 }
 
