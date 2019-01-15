@@ -2,19 +2,27 @@ package Actividad_15;
 
 
 public class Fibonacci {
-	int y;
-	public int Factor(int x) {
-		y=x-1;
-		if(y==1) {
-			return x;
-		}else {
-			return x*Factor(x-1);
-		}
+	public int fibonacci(int n){
+		    if (n>1){
+		       return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
+		    }
+		    else if (n==1) {  // caso base
+		        return 1;
+		    }
+		    else if (n==0){  // caso base
+		        return 0;
+		    }
+		    else{ //error
+		        System.out.println("Debes ingresar un tamaño mayor o igual a 1");
+		        return -1; 
+		    }
+		
 	}
 
 	public static void main(String[] args) {
 		
-		
+		Fibonacci ex = new Fibonacci();
+		System.out.println(ex.fibonacci(40));
 	}
 
 }
