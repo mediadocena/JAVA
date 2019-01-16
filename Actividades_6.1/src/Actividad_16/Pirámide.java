@@ -3,8 +3,10 @@ package Actividad_16;
 public class Pirámide {
 
 	public static void main(String[] args) {
+		//numero de filas de la pirámide:
 		int nfilas = 5;
 		int[] a = new int[1];
+		//Determinamos los números de la pirámide y la imprimimos en pantalla con la forma:
 		for (int i = 1; i <= nfilas; i++){
 			for(int k=i-5;k<=10;k++){
 				System.out.print( " ");

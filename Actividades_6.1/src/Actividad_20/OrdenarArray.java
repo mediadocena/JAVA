@@ -1,8 +1,8 @@
-package Actividad_18;
+package Actividad_20;
 
 import Utiles.Salieri;
 
-public class Burbuja {
+public class OrdenarArray {
 
 	public static void main(String[] args) {
 		int[][]array=new int[5][5];
@@ -40,6 +40,7 @@ public class Burbuja {
 			}
 			System.out.println();
 		}
+		//Insercion directa
 		ex.insercionDirecta(arr);
 		for (int i = 0; i < arraya.length; i++) {
 			array[i][i]=arr[i];
@@ -53,7 +54,4 @@ public class Burbuja {
 		}
 	}
 
-
 }
-
-

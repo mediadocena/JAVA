@@ -24,6 +24,20 @@ public class Salieri {
 				}while(exc);
 		 return a;
 	}
+	public String controlaString(){
+		 boolean exc = true;
+		 String a="";
+		 do {
+			try {
+			a=teclado.next();
+			exc = false;
+				}catch(Exception e){
+					teclado.nextLine();
+					System.out.println("ERROR, introduzca un caracter");
+					}
+				}while(exc);
+		 return a;
+	}
 	/**
 	 * Lee un número por teclado y determina si es double o no
 	 * @return Retorna el número double
@@ -91,24 +105,6 @@ public class Salieri {
 		 return a;
 	}
 	/**
-	 * Lee un String por teclado y controla las excepciones
-	 * @return Retorna un String
-	 */
-	public String controlaString(){
-		 boolean exc = true;
-		String a="";
-		 do {
-			try {
-			a=teclado.next();
-			exc = false;
-				}catch(Exception e){
-					teclado.nextLine();
-					System.out.println("ERROR, introduzca una cadena de caracteres");
-					}
-				}while(exc);
-		 return a;
-	}
-	/**
 	 *  Invierte un String
 	 * @param cadena Acepta como parámetro un String 
 	 * @return Retorna el String invertido
@@ -159,7 +155,7 @@ public class Salieri {
 		}
 	}
 	/**
-	 * 
+	 * Diversas utilidades para operar con arrays unidimensionales
 	 * @param vector Acepta como parámetro un array de enteros
 	 * @param opcion Acepta como parámetro un número entero:
 	 * 				1_Rellena un array con números aleatorios entre 0 y 100.
@@ -180,9 +176,48 @@ public class Salieri {
 		default:
 			break;
 		}
-			
-		
 	}
+	/**
+	 * 
+	 * @param arreglo acepta como parámetro un array
+	 */
+	 public void burbuja(int arreglo[])
+	    {
+	        for(int i = 0; i < arreglo.length - 1; i++)
+	        {
+	            for(int j = 0; j < arreglo.length - 1; j++)
+	            {
+	                if (arreglo[j] < arreglo[j + 1])
+	                {
+	                    int tmp = arreglo[j+1];
+	                    arreglo[j+1] = arreglo[j];
+	                    arreglo[j] = tmp;
+	                }
+	            }
+	        }
+	        for(int i = 0;i < arreglo.length; i++)
+	        {
+	            System.out.print(arreglo[i]+"\n");
+	        }
+	    }
+	 /**
+	  * 
+	  * @param A acepta como parámetro un array
+	  */
+	 public void insercionDirecta(int A[]){
+		    int p, j;
+		    int aux;
+		    for (p = 1; p < A.length; p++){ // desde el segundo elemento hasta
+		              aux = A[p]; // el final, guardamos el elemento y
+		              j = p - 1; // empezamos a comprobar con el anterior
+		              while ((j >= 0) && (aux < A[j])){ // mientras queden posiciones y el
+		                                                                    // valor de aux sea menor que los
+		                             A[j + 1] = A[j];       // de la izquierda, se desplaza a
+		                             j--;                   // la derecha
+		              }
+		              A[j + 1] = aux; // colocamos aux en su sitio
+		    }
+		}
 	
 }
 

@@ -5,11 +5,11 @@ import Utiles.Salieri;
 public class Fibonacci {
 	public int fibonacci(int n){
 		    
-		    if (n==1|| n==0){
-		       return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
+		    if (n==1||n==0){
+		    	return n;
 		    }
 		    else{ 
-		        return 1;
+		    	return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
 		    }
 		   
 		
@@ -20,7 +20,7 @@ public class Fibonacci {
 		Fibonacci ex = new Fibonacci();
 		int n = es.controlaentero();
 		for(int i = 0;i<n;i++) {
-		System.out.println(ex.fibonacci(n)+",");
+		System.out.print(ex.fibonacci(i)+",");
 		}
 	}
 

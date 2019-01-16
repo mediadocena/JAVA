@@ -9,8 +9,9 @@ public class Vector {
 		int contador=0;
 		String nombre[] = new String[2];
 		double[] nota =new double[2];
+		//Dividimos el texto a partir de /n
 		StringTokenizer tokens=new StringTokenizer(strDatos, "\n");
-		
+		//Ordenamos e imprimimos el texto, guardando las variables en vectores:
 		do {
 			
 		nombre[contador] =tokens.nextToken();
@@ -19,7 +20,7 @@ public class Vector {
 		contador++;
 	
 		}while(contador<2);
-		
+		//Imprimimos el resultado:
 		for (int i = 0; i < nota.length; i++) {
 			System.out.println("El alumno"+" "+nombre[i]+" "+"Ha sacado"+" "+nota[i]);
 		}

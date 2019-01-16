@@ -6,6 +6,7 @@ public class Factorial {
 	Factorial(){
 	
 	}
+	
 	public int Factor(int x) {
 		y=x-1;
 		if(y==1) {

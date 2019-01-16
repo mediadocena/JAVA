@@ -13,7 +13,7 @@ public class OperacionesCadena {
 		byte contadorO=0;
 		byte contadorE=0;
 		System.out.println("Cadena de texto al revés:");
-		
+		//cambiamos el orden del texto en el bucle, además contamos el numero de a,o y e.
 		for(int i = cadena.length()-1;i>=0;i--) {
 			System.out.print(cadena.charAt(i));
 			if(cadena.charAt(i)=='a') {
@@ -24,10 +24,12 @@ public class OperacionesCadena {
 				contadorE++;
 			}
 		}
+		//Imprimimos el número de e,a y o
 		System.out.println("");
 		System.out.println("Numero de e:"+contadorE);
 		System.out.println("Numero de a:"+contadorA);
 		System.out.println("Numero de o:"+contadorO);
+		//Determinamos si hay exceso de e, a y o.
 		if (contadorE>3) {
 			System.out.println("Exceso de e");
 		}
@@ -37,6 +39,7 @@ public class OperacionesCadena {
 		if(contadorO>5) {
 			System.out.println("Exceso de o");
 		}
+		//Buscamos un texto por teclado:
 		System.out.println("Introduzca una cadena para comparar:");
 		String a= ".*"+ex.controlaString()+".*";
 		if(cadena.matches(a)==false) {
