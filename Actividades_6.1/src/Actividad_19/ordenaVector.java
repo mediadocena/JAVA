@@ -6,12 +6,13 @@ public class ordenaVector {
 
 	public static void main(String[] args) {
 		Salieri ex = new Salieri();
-		int[][]matr = new int[][] {{1,2},{3,4}};
+		int[][]matr = new int[][] {{1,2,5},{3,4,6}};
 		int[] vector = new int[] {1,2};
 		int numcol=1;
+		//Comparamos el vector con cada columna de la matriz:
 		for (int i = 0; i < vector.length; i++) {
 			for (int j = 0; j < vector.length; j++) {
-				if(matr[j][i]==vector[j]) {
+				if(matr[i][j]==vector[j]) {
 					numcol=i;
 				}
 				if(matr[j][i]==vector[j]){
@@ -19,6 +20,7 @@ public class ordenaVector {
 				}
 			}
 		}
+		//Imprimimos el menú para determinar el método de ordenación:
 		System.out.println("Selecciona un método para ordenarlo");
 		System.out.println("1-Burbuja");
 		System.out.println("2-Insecion");

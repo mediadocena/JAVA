@@ -40,6 +40,7 @@ public class Burbuja {
 			}
 			System.out.println();
 		}
+		//Insercion directa:
 		ex.insercionDirecta(arr);
 		for (int i = 0; i < arraya.length; i++) {
 			array[i][i]=arr[i];

@@ -6,15 +6,9 @@ public class Caracol {
 
 	public static void main(String[] args) {
 		Salieri ex = new Salieri();
+		System.out.println("Introduzca la dimension de la matriz:");
 		int n = ex.controlaentero();
-		int[][] array = new int[n][n];
-		int contador=0;
-		int num=0;
-		
-		
-		
-		}
+		ex.mostrarMatriz(ex.generarMatrizCaracol(n, 1), n, n);
 	}
 
-
-
+}
