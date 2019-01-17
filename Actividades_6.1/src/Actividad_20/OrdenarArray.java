@@ -9,6 +9,7 @@ public class OrdenarArray {
 		int[] arraya=new int[5];
 		int[] arr = new int[5];
 		int n=0;
+		
 		Salieri ex = new Salieri();
 		//Rellenamos la matriz
 		for (int i = 0; i < array.length; i++) {

@@ -1,6 +1,8 @@
 package Utiles;
 import java.util.Scanner;
 
+
+
 public class Salieri {
 		Scanner teclado = new Scanner (System.in);
 	public Salieri(){
@@ -221,7 +223,8 @@ public class Salieri {
 	  */
 	 public int[][] generarMatrizCaracol(int n, int x) {
 	     int[][] M = new int[n + 1][n + 1];
-	     for (int a = 1; a <= n / 2; a++) {
+	     
+	     for (int a = 1; a <= n/2 ; a++) {
 	         for (int i = a; i <= n - a; i++) {
 	             M[a][i] = x;
 	             x++;
@@ -259,5 +262,30 @@ public class Salieri {
 	         System.out.println();
 	     }
 	 }
+	 /**
+	  * Crea la serie de fibonacci
+	  * @param n nº de veces a repetir la sucesión
+	  * @return valor de fibonacci en esa posición
+	  */
+	public int fibonacci(int n){
+		    
+		    if (n==1||n==0){
+		    	return n;
+		    }
+		    else{ 
+		    	return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
+		    }
+	}
+	/**
+	 * Método para imprimir fibonacci en pantalla,
+	 * llama al método fibonacci() directamente
+	 */
+	public void imprimirFibonacci() {
+		int n = controlaentero();
+		for(int i = 0;i<n;i++) {
+		System.out.print(fibonacci(i)+",");
+		}
+	
+	}
 }
 

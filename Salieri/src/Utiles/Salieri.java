@@ -24,6 +24,20 @@ public class Salieri {
 				}while(exc);
 		 return a;
 	}
+	public String controlaString(){
+		 boolean exc = true;
+		 String a="";
+		 do {
+			try {
+			a=teclado.next();
+			exc = false;
+				}catch(Exception e){
+					teclado.nextLine();
+					System.out.println("ERROR, introduzca un caracter");
+					}
+				}while(exc);
+		 return a;
+	}
 	/**
 	 * Lee un número por teclado y determina si es double o no
 	 * @return Retorna el número double
@@ -167,26 +181,99 @@ public class Salieri {
 	 * 
 	 * @param arreglo acepta como parámetro un array
 	 */
-	 static void burbuja(int arreglo[])
-	    {
-	        for(int i = 0; i < arreglo.length - 1; i++)
-	        {
-	            for(int j = 0; j < arreglo.length - 1; j++)
-	            {
-	                if (arreglo[j] < arreglo[j + 1])
-	                {
+	 public void burbuja(int arreglo[]) {
+	        for(int i = 0; i < arreglo.length - 1; i++){
+	            for(int j = 0; j < arreglo.length - 1; j++){
+	                if (arreglo[j] < arreglo[j + 1]){
 	                    int tmp = arreglo[j+1];
 	                    arreglo[j+1] = arreglo[j];
 	                    arreglo[j] = tmp;
 	                }
 	            }
 	        }
-	        for(int i = 0;i < arreglo.length; i++)
-	        {
+	        for(int i = 0;i < arreglo.length; i++){
 	            System.out.print(arreglo[i]+"\n");
 	        }
 	    }
+	 /**
+	  * 
+	  * @param A acepta como parámetro un array
+	  */
+	 public void insercionDirecta(int A[]){
+		    int p, j;
+		    int aux;
+		    for (p = 1; p < A.length; p++){ // desde el segundo elemento hasta
+		              aux = A[p]; // el final, guardamos el elemento y
+		              j = p - 1; // empezamos a comprobar con el anterior
+		              while ((j >= 0) && (aux < A[j])){ // mientras queden posiciones y el
+		                                                                    // valor de aux sea menor que los
+		                             A[j + 1] = A[j];       // de la izquierda, se desplaza a
+		                             j--;                   // la derecha
+		              }
+		              A[j + 1] = aux; // colocamos aux en su sitio
+		    }
+		}
+	 /**
+	  * Genera Una Matriz Caracol.
+	  * @param n dimensión de la matriz cuadrada
+	  * @param x numero con el que se iniciará la matriz caracol
+	  * @return retorna una matriz de enteros con la matriz caracol ya generada.
+	  */
+	 public int[][] generarMatrizCaracol(int n, int x) {
+	     int[][] M = new int[n + 1][n + 1];
+	     for (int a = 1; a <= n / 2; a++) {
+	         for (int i = a; i <= n - a; i++) {
+	             M[a][i] = x;
+	             x++;
+	         }
+	         for (int i = a; i <= n - a; i++) {
+	             M[i][n - a + 1] = x;
+	             x++;
+	         }
+	         for (int i = n - a + 1; i >= a + 1; i--) {
+	             M[n - a + 1][i] = x;
+	             x++;
+	         }
+	         for (int i = n - a + 1; i >= a + 1; i--) {
+	             M[i][a] = x;
+	             x++;
+	         }
+	     }
+	     if (n % 2 == 1) {
+	         M[n / 2 + 1][n / 2 + 1] = x;
+	     }
+	     return M;
+	 }
+
+	 /**
+	  * Muestra Una Matriz Cualquiera Por Consola A Partir De La Fila 1 y Columna 1
+	  * @param M matriz a mostrar
+	  * @param f numero de filas de la matriz
+	  * @param c numero de columnas de la matriz
+	  */
+	 public void mostrarMatriz(int[][] M, int f, int c) {
+	     for (int i = 1; i <= f; i++) {
+	         for (int j = 1; j <= c; j++) {
+	             System.out.print("\t" + M[i][j]);
+	         }
+	         System.out.println();
+	     }
+	 }
+	public int fibonacci(int n){
+		    
+		    if (n==1||n==0){
+		    	return n;
+		    }
+		    else{ 
+		    	return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
+		    }
+	}
+	public void imprimirFibonacci() {
+		int n = controlaentero();
+		for(int i = 0;i<n;i++) {
+		System.out.print(fibonacci(i)+",");
+		}
 	
-	
+	}
 }
 
