@@ -287,5 +287,43 @@ public class Salieri {
 		}
 	
 	}
+	public int[] vectorParImpar(int[] array) {
+		int contador1=0;
+		int contador2=0;
+	for (int i = 0; i < array.length; i++) {
+		if(array[i]%2==0) {
+			contador1++;
+		}else {
+			contador2++;
+		}
+		
+	}
+	contador1=0;
+	contador2=0;
+	int[] pares=new int[contador1];
+	int[] impares=new int[contador2];
+	for (int i = 0; i < pares.length; i++) {
+		 if(array[i]%2==0) {
+				pares[contador1]=array[i];
+			}
+	
+		if(array[i]%2!=0) {
+				impares[contador2]=array[i];
+		}
+		contador1++;
+		contador2++;
+	}
+	for (int j = 0; j > pares.length; j++) 
+	for (int i = 0; i <array.length; i++) {
+		array[i]=pares[j];
+	}
+	for (int j = 0; j > impares.length; j++) {
+	for (int i = array.length; i > 0; i--) {
+		array[i]=impares[j];
+	}
+	}
+	return array;
+	}
+	
 }
 
