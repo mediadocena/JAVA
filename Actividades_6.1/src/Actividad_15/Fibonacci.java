@@ -11,8 +11,6 @@ public class Fibonacci {
 		    else{ 
 		    	return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
 		    }
-		   
-		
 	}
 
 	public static void main(String[] args) {
