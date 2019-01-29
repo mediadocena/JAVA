@@ -1,5 +1,10 @@
 package Utiles;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
+
+
 
 
 
@@ -9,8 +14,8 @@ public class Salieri {
 
 	}
 	/**
-	 * Lee un nï¿½mero entero por teclado y controla las exepciones
-	 * @return Retorna el nï¿½mero entero
+	 * Lee un numero entero por teclado y controla las exepciones
+	 * @return Retorna el numero entero
 	 */
 	public int controlaentero(){
 		 boolean exc = true;
@@ -41,8 +46,8 @@ public class Salieri {
 		 return a;
 	}
 	/**
-	 * Lee un nï¿½mero por teclado y determina si es double o no
-	 * @return Retorna el nï¿½mero double
+	 * Lee un numero por teclado y determina si es double o no
+	 * @return Retorna el numero double
 	 */
 	public double controladouble(){
 		 boolean exc = true;
@@ -59,8 +64,8 @@ public class Salieri {
 		 return a;
 	}
 	/**
-	 * Lee un nï¿½mero por teclado y determina si es positivo o no
-	 * @return Retorna el nï¿½mero positivo
+	 * Lee un numero por teclado y determina si es positivo o no
+	 * @return Retorna el numero positivo
 	 */
 	public int controlapositivo() {
 		 boolean exc = true;
@@ -83,8 +88,8 @@ public class Salieri {
 		 return a;
 	}
 	/**
-	 * Lee un nï¿½mero por teclado y determina si es negativo o no
-	 * @return Retorna el nï¿½mero negativo
+	 * Lee un numero por teclado y determina si es negativo o no
+	 * @return Retorna el numero negativo
 	 */
 	public int controlanegativo() {
 		 boolean exc = true;
@@ -96,19 +101,19 @@ public class Salieri {
 			if(a<0) {
 				exc=false;
 			}else{
-				System.out.println("Error, introduzca un nï¿½mero negativo");
+				System.out.println("Error, introduzca un numero negativo");
 				exc=true;
 			}
 				}catch(Exception e){
 					teclado.nextLine();
-					System.out.println("ERROR, introduzca un nï¿½mero entero negativo");
+					System.out.println("ERROR, introduzca un numero entero negativo");
 					}
 				}while(exc);
 		 return a;
 	}
 	/**
 	 *  Invierte un String
-	 * @param cadena Acepta como parï¿½metro un String
+	 * @param cadena Acepta como parametro un String
 	 * @return Retorna el String invertido
 	 */
 	public String invertirString(String cadena) {
@@ -120,9 +125,9 @@ public class Salieri {
 		return cadenainv;
 	}
 	/**
-	 * Determina si un nï¿½mero es capicï¿½a
-	 * @param capicua Acepta como parï¿½metro un entero
-	 * @return Retorna true si es capicï¿½a o false si no
+	 * Determina si un numero es capicua
+	 * @param capicua Acepta como parametro un entero
+	 * @return Retorna true si es capicua o false si no
 	 */
 	public boolean esCapicua(int capicua) {
 		boolean capi=false;
@@ -142,13 +147,13 @@ public class Salieri {
 		return capi;
 	}
 	/**
-	 * Rellena un array con nï¿½meros aleatorios entre 0 y 100
-	 * @param vector Acepta como parï¿½metro un array de enteros
+	 * Rellena un array con numeros aleatorios entre 0 y 100
+	 * @param vector Acepta como parametro un array de enteros
 	 */
 
 	/**
 	 * Muestra en pantalla el contenido de un vector de numeros enteros
-	 * @param vector Acepta como parï¿½metro un array de enteros.
+	 * @param vector Acepta como parametro un array de enteros.
 	 */
 
 	public void rellenaVectornum(int[] vector) {
@@ -158,9 +163,9 @@ public class Salieri {
 	}
 	/**
 	 * Diversas utilidades para operar con arrays unidimensionales
-	 * @param vector Acepta como parï¿½metro un array de enteros
-	 * @param opcion Acepta como parï¿½metro un nï¿½mero entero:
-	 * 				1_Rellena un array con nï¿½meros aleatorios entre 0 y 100.
+	 * @param vector Acepta como parametro un array de enteros
+	 * @param opcion Acepta como parametro un numero entero:
+	 * 				1_Rellena un array con numeros aleatorios entre 0 y 100.
 	 * 				2_Muestra en pantalla el contenido de un vector de numeros enteros.
 	 */
 	public void vectorUtil(int[] vector,int opcion) {
@@ -181,7 +186,7 @@ public class Salieri {
 	}
 	/**
 	 *
-	 * @param arreglo acepta como parï¿½metro un array
+	 * @param arreglo acepta como parametro un array
 	 */
 	 public void burbuja(int arreglo[]) {
 	        for(int i = 0; i < arreglo.length - 1; i++){
@@ -199,7 +204,7 @@ public class Salieri {
 	    }
 	 /**
 	  *
-	  * @param A acepta como parï¿½metro un array
+	  * @param A acepta como parametro un array
 	  */
 	 public void insercionDirecta(int A[]){
 		    int p, j;
@@ -217,8 +222,8 @@ public class Salieri {
 		}
 	 /**
 	  * Genera Una Matriz Caracol.
-	  * @param n dimensiï¿½n de la matriz cuadrada
-	  * @param x numero con el que se iniciarï¿½ la matriz caracol
+	  * @param n dimension de la matriz cuadrada
+	  * @param x numero con el que se iniciara la matriz caracol
 	  * @return retorna una matriz de enteros con la matriz caracol ya generada.
 	  */
 	 public int[][] generarMatrizCaracol(int n, int x) {
@@ -261,4 +266,35 @@ public class Salieri {
 	         System.out.println();
 	     }
 	 }
-}
+	 /**
+	  * Metodo para rellenar un arraylist con numeros aleatorios, controlando los parámetros
+	  * @param longitud longitud del arraylist a llenar
+	  * @param num numero limite para generar numeros
+	  * @param t arraylist a llenar
+	  */
+	 public void llenarListIntRandom(List<Integer> t,int longitud,int num) {
+		 for (int i = 0; i < longitud; i++) {
+			 t.add((int)(Math.random()*num+1));
+		}
+	 }
+	 /**
+	  * Metodo para mostrar en pantalla un arraylist 
+	  * @param a Arraylist a mostrar
+	  */
+	 public void mostrarListInt(List a) {
+		 for(int i=0;i<a.size();i++) {
+			 System.out.println(a.get(i));
+		 }
+	 }
+	 /**
+	  * Metodo para llenar un arraylist por teclado, controlando los parametros
+	  * @param t arraylist a mostrar
+	  * @param longitud longitud del arraylist a llenar
+	  */
+	 public void llenarListIntTeclado(List<Integer> t,int longitud) {
+		 for (int i = 0; i < longitud; i++) {
+			 System.out.println("Introduzca un número para la posición:"+" "+i);
+			 t.add(controlaentero());
+		}
+	 }
+ }
