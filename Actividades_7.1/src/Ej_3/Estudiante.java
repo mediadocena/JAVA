@@ -2,21 +2,22 @@ package Ej_3;
 
 public class Estudiante extends Persona {
 	
-	String ID;
+	int ID;
 	
 	Estudiante(){
 		
 	}
 	
-	Estudiante(String ID){
-		
+	Estudiante(int ID,String nombre,String apellidos,String nif,String direccion){
+		super(nombre,apellidos,nif,direccion);
+		this.ID=ID;
 	}
 
-	public String getID() {
+	public int getID() {
 		return ID;
 	}
 
-	public void setID(String iD) {
+	public void setID(int iD) {
 		ID = iD;
 	}
 	

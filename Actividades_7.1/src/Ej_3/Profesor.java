@@ -2,18 +2,19 @@ package Ej_3;
 
 public class Profesor extends Persona{
 	
-	String despacho;
+	int despacho;
 	
 	Profesor(){
 		
 	}
-	Profesor(String despacho){
-		
+	Profesor(int despacho,String nombre,String apellidos,String nif,String direccion){
+		super(nombre,apellidos,nif,direccion);
+		this.despacho=despacho;
 	}
-	public String getDespacho() {
+	public int getDespacho() {
 		return despacho;
 	}
-	public void setDespacho(String despacho) {
+	public void setDespacho(int despacho) {
 		this.despacho = despacho;
 	}
 	

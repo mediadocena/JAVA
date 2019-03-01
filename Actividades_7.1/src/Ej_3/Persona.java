@@ -7,7 +7,15 @@ public abstract class Persona implements Humano {
 	String nif;
 	String direccion;
 	
-	
+	Persona(){
+		
+	}
+	Persona(String nombre,String apellidos,String nif,String direccion){
+		this.nombre=nombre;
+		this.apellidos=apellidos;
+		this.nif=nif;
+		this.direccion=direccion;
+	}
 	
 	public String getNombre() {
 		return nombre;
