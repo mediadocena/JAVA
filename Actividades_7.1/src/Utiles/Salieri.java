@@ -1,5 +1,6 @@
 package Utiles;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -13,13 +14,94 @@ public class Salieri {
 	public Salieri(){
 
 	}
+	public String controlaNIF() {
+		boolean válido=false;
+		System.out.println("Introduzca el dni:");
+		String nif =teclado.next();
+		do {
+		char letra = 'a';
+		válido=false;
+		char esdigito='a';
+		//Controlamos la cantidad de digitos:
+		if (nif.length()==9) {
+			letra = nif.charAt(8); //Posición de la letra
+		
+		//Determinamos si el ultimo digito es una letra
+		if(Character.isAlphabetic(letra)==true) {
+			válido = true;
+			//Determinamos si el resto de digitos son números
+			for (int i = 0; i < 8; i++) {
+				esdigito=nif.charAt(i);
+				if(Character.isDigit(esdigito)==false) {
+					válido=false;
+					System.out.println("NIF no válido");
+				}else {válido=true;}
+			}
+		}else {
+			System.out.println("NIF no válido, introduzca un nif válido:");
+			nif=teclado.next(); 
+			válido=false;
+			}
+			
+		}else {
+			System.out.println("NIF no válido, introduzca un nif válido:");
+			nif=teclado.next(); 
+			válido=false;
+		}
+		}while(válido==false);
+	return nif;
+	}
+	
 	/**
-	 * Lee un String e imprime un mensaje.
-	 * @param m
-	 * @return
+	 * Muestra un mensaje en pantalla y lee un numero entero por teclado  controlando las exepciones.
+	 * @return Retorna el numero entero
 	 */
-	public String controlaStringSt(String m){
-		System.out.println(m);
+	public int controlaenteroSt(String h){
+		System.out.println(h);
+		 boolean exc = true;
+		 int a=0;
+		 
+	
+		 
+		 do {
+			try {
+			a=teclado.nextInt();
+			exc = false;
+				}catch(Exception e){
+					teclado.nextLine();
+					System.out.println("ERROR, introduzca un nï¿½mero");
+					}
+				}while(exc);
+		 return a;
+	}
+	/**
+	 * Lee un numero entero por teclado y controla las exepciones
+	 * @return Retorna el numero entero
+	 */
+	public int controlaentero(){
+		
+		 boolean exc = true;
+		 int a=0;
+		 
+	
+		 
+		 do {
+			try {
+			a=teclado.nextInt();
+			exc = false;
+				}catch(Exception e){
+					teclado.nextLine();
+					System.out.println("ERROR, introduzca un numero");
+					}
+				}while(exc);
+		 return a;
+	}
+	/**
+	 * Muestra un mensaje en pantalla y lee un String por teclado  controlando las exepciones.
+	 * @return Retorna el String
+	 */
+	public String controlaStringSt(String h){
+		System.out.println(h);
 		 boolean exc = true;
 		 String a="";
 		 do {
@@ -34,46 +116,9 @@ public class Salieri {
 		 return a;
 	}
 	/**
-	 * Lee un numero entero por teclado y controla las exepciones, imprimiendo un mensaje
-	 * @return Retorna el numero entero
+	 * Lee un numero entero por teclado  controlando las exepciones.
+	 * @return Retorna el String
 	 */
-	public int controlaenteroSt(String m){
-		 boolean exc = true;
-		 int a=0;
-		 do {
-			try {
-			a=teclado.nextInt();
-			exc = false;
-				}catch(Exception e){
-					teclado.nextLine();
-					System.out.println("ERROR, introduzca un número");
-					}
-				}while(exc);
-		 return a;
-	}
-	
-	
-	
-	
-	
-	/**
-	 * Lee un numero entero por teclado y controla las exepciones
-	 * @return Retorna el numero entero
-	 */
-	public int controlaentero(){
-		 boolean exc = true;
-		 int a=0;
-		 do {
-			try {
-			a=teclado.nextInt();
-			exc = false;
-				}catch(Exception e){
-					teclado.nextLine();
-					System.out.println("ERROR, introduzca un nï¿½mero");
-					}
-				}while(exc);
-		 return a;
-	}
 	public String controlaString(){
 		 boolean exc = true;
 		 String a="";
@@ -101,7 +146,7 @@ public class Salieri {
 			exc = false;
 				}catch(Exception e){
 					teclado.nextLine();
-					System.out.println("ERROR, introduzca un nï¿½mero");
+					System.out.println("ERROR, introduzca un numero");
 					}
 				}while(exc);
 		 return a;
@@ -120,12 +165,12 @@ public class Salieri {
 			if(a>=0) {
 				exc=false;
 			}else{
-				System.out.println("Error, introduzca un nï¿½mero positivo");
+				System.out.println("Error, introduzca un numero positivo");
 				exc=true;
 			}
 				}catch(Exception e){
 					teclado.nextLine();
-					System.out.println("ERROR, introduzca un nï¿½mero entero positivo");
+					System.out.println("ERROR, introduzca un numero entero positivo");
 					}
 				}while(exc);
 		 return a;
@@ -206,27 +251,69 @@ public class Salieri {
 	}
 	/**
 	 * Diversas utilidades para operar con arrays unidimensionales
-	 * @param vector Acepta como parametro un array de enteros
-	 * @param opcion Acepta como parametro un numero entero:
-	 * 				1_Rellena un array con numeros aleatorios entre 0 y 100.
+	 * @param vector Acepta como parámetro un array de enteros
+	 * @param opcion Acepta como parámetro un número entero:
+	 * 				1_Rellena un array con números aleatorios entre 10 y 100.
 	 * 				2_Muestra en pantalla el contenido de un vector de numeros enteros.
+	 * 				3_Muestra en pantalla el contenido de un vector invertido.
+	 * 				4_Suma el contenido del array y lo muestra en pantalla.
+	 * 				5_Suma el contenido de las posiciones pares y lo muestra en pantalla.
+	 * 				6_Muestra la posicion que contiene el valor mayor.
 	 */
 	public void vectorUtil(int[] vector,int opcion) {
 		switch (opcion) {
 		case 1:
 			for (int i = 0; i < vector.length; i++) {
-				vector[i]=(int)(Math.random()*101);
+				vector[i]=(int)(Math.random()*100+10);
 			}
-
+			
 			break;
 		case 2:
 			for (int i = 0; i < vector.length; i++) {
 				System.out.println(vector[i]);
 			}
+			break;
+		case 3:
+			for (int i = vector.length-1; i>=0; i--) {
+				System.out.println(vector[i]);
+			}
+			break;
+		case 4:
+			int cont=0;
+			int suma=0;
+			for (int i = 0; i < vector.length; i++) {
+				suma=vector[i]+cont;
+				cont=vector[i];
+			}
+			System.out.println(suma);
+			break;
+		case 5:
+			 cont=0;
+			 suma=0;
+			for (int i = 0; i < vector.length; i++) {
+				if(i%2==0) {
+				suma=vector[i]+cont;
+				cont=vector[i];
+				}
+			}
+			System.out.println(suma);
+			break;
+		case 6:
+			cont=0;
+			int max=0;
+			for (int i = 0; i < vector.length; i++) {
+				if(vector[i]>cont) {
+					cont=vector[i];
+					max=i;
+				}
+			}
+			
+			break;
 		default:
 			break;
 		}
 	}
+	
 	/**
 	 *
 	 * @param arreglo acepta como parametro un array
@@ -340,4 +427,29 @@ public class Salieri {
 			 t.add(controlaentero());
 		}
 	 }
-}
+	 /**
+	  * Método para generar automáticamente un DNI válido
+	  * @return Devuelve un String con el dni.
+	  */
+	 public String Dni() {
+		 String Dni[]= new String[9];
+		 String letra="ABCDEFGHIJKLMNÑOPQRSTUVWYZ";
+		 for(int i=0;i<=8;i++) {
+			 int numero= (int)(Math.random()*9+1);
+			 int let= (int)(Math.random()*25+1);
+			 if(i==8) {
+				 char a= letra.charAt(let);
+				 Dni[i] = Character.toString(a);
+			 }else {
+			 Dni[i] = Integer.toString(numero);
+			 }
+		 }
+		 String str = Arrays.toString(Dni);
+		 letra=str;
+		 letra=(letra.replace(",", ""));
+		 letra=(letra.replace("[", ""));
+		 letra=(letra.replace("]", ""));
+		 letra=(letra.replace(" ", ""));
+		 return letra ;
+	 }
+ }
