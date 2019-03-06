@@ -31,21 +31,9 @@ public class Test {
 			despacho++;
 			break;
 		case 3:
-			System.out.println("1-Informacion estudiantes");
-			System.out.println("2-Informacion Profesores");
-			opcion=0;
-			opcion=ex.controlaentero();
-			switch (opcion) {
-			case 1:
-				Estudiante b= (Estudiante) a.get(ex.controlaenteroSt("Introduzca el ID del estudiante"));
-				b.toString();
-				break;
-			case 2:
-				Profesor c = (Profesor) a.get(ex.controlaenteroSt("Introduzca el numero de despacho del profesor:"));
-				c.toString();
-				break;
-			default:
-				break;
+			for (int j = 0; j < a.size(); j++) {
+				Persona c = a.get(j);
+				System.out.println(c.toString()+"\n");
 			}
 			break;
 		case 4:

@@ -10,20 +10,22 @@ public class Revista extends Biblioteca{
 	}
 
 	@Override
-	public void cuentaPrestados() {
+	public Object[]  cuentaPrestados() {
+		return null;
 		
 		
 	}
 
 	@Override
-	public void publicacionesAnterioresA() {
+	public Object[]  publicacionesAnterioresA() {
+		return null;
 		
 		
 	}
 	
 	public String toString() {
 		
-		return titulo;
+	return "Codigo:"+codigo+"titulo"+titulo+"año"+año+"numero"+numero;
 		
 	}
 

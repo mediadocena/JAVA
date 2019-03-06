@@ -21,11 +21,11 @@ public class Profesor extends Persona{
 	
 	@Override
 	public String toString() {
-		return "Profesor despacho=" + despacho + " "+"Tipo:"+" "+"Profesor";
+		return "despacho=" + despacho + " "+"Tipo:"+" "+Indentificate();
 	}
 	@Override
-	public void Indentificate() {
-		toString();
+	public String Indentificate() {
+		return "Profesor";
 		
 	}
 	

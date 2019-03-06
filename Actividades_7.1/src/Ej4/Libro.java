@@ -1,6 +1,6 @@
 package Ej4;
 
-public class Libro extends Biblioteca {
+public class Libro extends Biblioteca implements Prestable{
 	
 	boolean prestado;
 	
@@ -12,20 +12,22 @@ public class Libro extends Biblioteca {
 	}
 
 	@Override
-	public void cuentaPrestados() {
+	public Object[] cuentaPrestados() {
+		return null;
 		
 		
 	}
 
 	@Override
-	public void publicacionesAnterioresA() {
+	public Object[] publicacionesAnterioresA() {
+		return null;
 		
 		
 	}
 	
 	public String toString() {
 		
-		return titulo;
+	return "Codigo:"+codigo+"titulo"+titulo+"año"+año+"prestado"+prestado;
 		
 	}	
 	public String getTitulo() {
@@ -36,5 +38,23 @@ public class Libro extends Biblioteca {
 	}
 	public int getAño() {
 		return año;
+	}
+
+	@Override
+	public void Prestar() {
+		
+		
+	}
+
+	@Override
+	public void Devolver() {
+		
+		
+	}
+
+	@Override
+	public void Prestado() {
+		
+		
 	}
 }

@@ -25,14 +25,14 @@ public class Estudiante extends Persona {
 	public String toString() {
 		
 		
-		return"ID:"+ID+" "+"Tipo:"+" "+"Estudiante";
+		return"ID:"+ID+" "+"Tipo:"+" "+Indentificate();
 		
 	}
 
 	@Override
-	public void Indentificate() {
+	public String Indentificate() {
 		
-		toString();
+		return "Estudiante";
 	}
 	
 	

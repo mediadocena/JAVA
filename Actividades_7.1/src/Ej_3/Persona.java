@@ -42,7 +42,7 @@ public abstract class Persona implements Humano {
 		this.direccion = direccion;
 	}
 	
-	public abstract void Indentificate();
+	public abstract String Indentificate();
 		
 	
 	

@@ -11,8 +11,8 @@ public abstract class Biblioteca {
 		this.titulo=titulo;
 		this.año=año;
 	}
-	abstract public  void cuentaPrestados();
-	abstract public void publicacionesAnterioresA();
+	abstract public Object[] cuentaPrestados();
+	abstract public Object[] publicacionesAnterioresA();
 	
  	
 }

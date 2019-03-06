@@ -32,7 +32,7 @@ public final class Menu {
 		int opc = ex.controlaenteroSt("Introduzca el numero de cuenta");
 		try {
 			
-			h.get(opc);
+			
 			Cuenta c = h.get(opc);
 			do {
 			System.out.println("Ha accedido a su cuenta,¿Que operaciones desea realizar?");
