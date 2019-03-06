@@ -37,16 +37,17 @@ public class Test {
 			opcion=ex.controlaentero();
 			switch (opcion) {
 			case 1:
-				Persona b= a.get(ex.controlaenteroSt("Introduzca el ID del estudiante"));
+				Estudiante b= (Estudiante) a.get(ex.controlaenteroSt("Introduzca el ID del estudiante"));
 				b.toString();
 				break;
 			case 2:
-				Persona c = a.get(ex.controlaenteroSt("Introduzca el numero de despacho del profesor:"));
+				Profesor c = (Profesor) a.get(ex.controlaenteroSt("Introduzca el numero de despacho del profesor:"));
 				c.toString();
 				break;
 			default:
 				break;
 			}
+			break;
 		case 4:
 			System.out.println("Saliendo...");
 			break;
