@@ -9,16 +9,9 @@ public class Revista extends Biblioteca{
 		this.numero=numero;
 	}
 
-	@Override
-	public Object[]  cuentaPrestados() {
-		return null;
-		
-		
-	}
 
-	@Override
-	public Object[]  publicacionesAnterioresA() {
-		return null;
+	public void publicacionesAnterioresA(Biblioteca a,int año) {
+		
 		
 		
 	}

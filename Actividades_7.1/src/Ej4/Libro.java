@@ -1,5 +1,8 @@
 package Ej4;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Libro extends Biblioteca implements Prestable{
 	
 	boolean prestado;
@@ -11,20 +14,33 @@ public class Libro extends Biblioteca implements Prestable{
 		
 	}
 
-	@Override
-	public Object[] cuentaPrestados() {
-		return null;
-		
+	
+	public void cuentaPrestados(ArrayList<Biblioteca> a) {
+		int contador=0;
+		for (Biblioteca biblioteca : a) {
+			if (a instanceof Libro) {
+				Libro c = (Libro) b;
+				if (((Libro) b).isPrestado()) {
+					contador++;
+				}
+			}
+		}
+		System.out.println("Libros prestados:"+" "+contador);
 		
 	}
 
 	@Override
-	public Object[] publicacionesAnterioresA() {
-		return null;
+	public void publicacionesAnterioresA(Biblioteca a,int año) {
+		
 		
 		
 	}
 	
+	
+	public boolean isPrestado() {
+		return prestado;
+	}
+
 	public String toString() {
 		
 	return "Codigo:"+codigo+"titulo"+titulo+"año"+año+"prestado"+prestado;
