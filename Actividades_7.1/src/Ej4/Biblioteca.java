@@ -2,9 +2,9 @@ package Ej4;
 
 public abstract class Biblioteca {
 		
-	int codigo;
-	String titulo;
-	int año;
+	protected int codigo;
+	protected String titulo;
+	protected int año;
 	
 	Biblioteca(int codigo,String titulo,int año){
 		this.codigo=codigo;

@@ -2,10 +2,10 @@ package Ej_3;
 
 public class Direccion {
 	
-	String calle;
-	String ciudad;
-	int cpostal;
-	String pais;
+	private String calle;
+	private String ciudad;
+	private int cpostal;
+	private String pais;
 	
 	Direccion(){
 		

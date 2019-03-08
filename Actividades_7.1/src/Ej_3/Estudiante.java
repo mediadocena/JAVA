@@ -2,7 +2,7 @@ package Ej_3;
 
 public class Estudiante extends Persona {
 	
-	int ID;
+	private int ID;
 	
 	Estudiante(){
 		

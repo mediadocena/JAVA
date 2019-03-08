@@ -2,7 +2,7 @@ package Ej_3;
 
 public class Profesor extends Persona{
 	
-	int despacho;
+	private int despacho;
 	
 	Profesor(){
 		

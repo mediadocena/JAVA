@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Revista extends Biblioteca{
 	
-	int numero;
+	private int numero;
 	
 	Revista(int numero,int codigo,String titulo,int año){
 		super(codigo,titulo,año);

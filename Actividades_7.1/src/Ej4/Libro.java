@@ -47,7 +47,7 @@ public class Libro extends Biblioteca implements Prestable{
 	
 	public String toString() {
 		
-	return "Codigo:"+codigo+"titulo"+titulo+"año"+año+"prestado"+prestado;
+	return "Codigo:"+getCodigo()+"titulo"+getTitulo()+"año"+getAño()+"prestado"+prestado;
 		
 	}	
 	public String getTitulo() {
