@@ -1,5 +1,8 @@
 package Ej4;
 
+
+import java.util.List;
+
 public class Libro extends Biblioteca implements Prestable{
 	
 	boolean prestado;
@@ -11,17 +14,34 @@ public class Libro extends Biblioteca implements Prestable{
 		
 	}
 
-	@Override
-	public Object[] cuentaPrestados() {
-		return null;
-		
+	
+	public int cuentaPrestados(List<Biblioteca> a) {
+		int cont=0;
+		for (Biblioteca biblioteca : a) {
+			if (biblioteca instanceof Libro) {
+				if (((Libro)biblioteca).isPrestado()==true) {
+					cont++;
+				}
+			}
+		}
+		return cont;
 		
 	}
 
-	@Override
-	public Object[] publicacionesAnterioresA() {
-		return null;
-		
+	
+	public boolean isPrestado() {
+		return prestado;
+	}
+
+
+	public int publicacionesAnterioresA(List<Biblioteca> a,int año) {
+		int cont=0;
+		for (Biblioteca biblioteca : a) {
+			if (biblioteca.getAño()<año) {
+				cont++;
+			}
+		}
+		return cont;
 		
 	}
 	
@@ -42,19 +62,29 @@ public class Libro extends Biblioteca implements Prestable{
 
 	@Override
 	public void Prestar() {
-		
-		
+		setPrestado(true);
+		System.out.println("Libro prestado");
 	}
 
 	@Override
 	public void Devolver() {
-		
+		setPrestado(false);
+		System.out.println("Libro devuelto");
 		
 	}
 
 	@Override
 	public void Prestado() {
-		
+		if (isPrestado()==true) {
+			System.out.println("El libro está prestado");
+		}else {System.out.println("El libro no esta prestado");}
 		
 	}
+
+
+	public void setPrestado(boolean prestado) {
+		this.prestado = prestado;
+	}
+
+	
 }

@@ -1,5 +1,8 @@
 package Ej4;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Revista extends Biblioteca{
 	
 	int numero;
@@ -9,19 +12,18 @@ public class Revista extends Biblioteca{
 		this.numero=numero;
 	}
 
-	@Override
-	public Object[]  cuentaPrestados() {
-		return null;
-		
-		
-	}
-
-	@Override
-	public Object[]  publicacionesAnterioresA() {
-		return null;
-		
+	
+	public int publicacionesAnterioresA(List<Biblioteca> a,int año) {
+		int cont=0;
+		for (Biblioteca biblioteca : a) {
+			if (biblioteca.getAño()<año) {
+				cont++;
+			}
+		}
+		return cont;
 		
 	}
+	
 	
 	public String toString() {
 		

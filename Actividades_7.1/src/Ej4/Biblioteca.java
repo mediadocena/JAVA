@@ -11,8 +11,31 @@ public abstract class Biblioteca {
 		this.titulo=titulo;
 		this.año=año;
 	}
-	abstract public Object[] cuentaPrestados();
-	abstract public Object[] publicacionesAnterioresA();
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public int getAño() {
+		return año;
+	}
+
+	public void setAño(int año) {
+		this.año = año;
+	}
+	
 	
  	
 }
