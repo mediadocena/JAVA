@@ -4,12 +4,12 @@ public abstract class Biblioteca {
 		
 	protected int codigo;
 	protected String titulo;
-	protected int a�o;
+	protected int ano;
 	
-	Biblioteca(int codigo,String titulo,int a�o){
+	Biblioteca(int codigo,String titulo,int ano){
 		this.codigo=codigo;
 		this.titulo=titulo;
-		this.a�o=a�o;
+		this.ano=ano;
 	}
 
 	public int getCodigo() {
@@ -28,12 +28,12 @@ public abstract class Biblioteca {
 		this.titulo = titulo;
 	}
 
-	public int getA�o() {
-		return a�o;
+	public int getAno() {
+		return ano;
 	}
 
-	public void setA�o(int a�o) {
-		this.a�o = a�o;
+	public void setAno(int ano) {
+		this.ano = ano;
 	}
 	
 	

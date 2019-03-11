@@ -8,6 +8,7 @@ public class Test {
 		Catalogo g = new Catalogo();
 		Salieri ex = new Salieri();
 		g.anñadeObra();
+		g.anñadeObra();
 		g.buscarObra(ex.controlaenteroSt("Introduzca el nº de inventario a buscar"));
 		g.eliminaObra(ex.controlaenteroSt("Introduzca el nº de inventario a borrar"));
 		g.Superficie();

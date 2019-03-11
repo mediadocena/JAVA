@@ -6,9 +6,9 @@ public class Libro extends Biblioteca implements Prestable{
 	
 	boolean prestado;
 	
-	Libro(int codigo,String titulo,int a�o){
+	Libro(int codigo,String titulo,int ano){
 		
-		super(codigo,titulo,a�o);
+		super(codigo,titulo,ano);
 		prestado=false;
 		
 	}
@@ -33,10 +33,10 @@ public class Libro extends Biblioteca implements Prestable{
 	}
 
 
-	public int publicacionesAnterioresA(List<Biblioteca> a,int a�o) {
+	public int publicacionesAnterioresA(List<Biblioteca> a,int ano) {
 		int cont=0;
 		for (Biblioteca biblioteca : a) {
-			if (biblioteca.getA�o()<a�o) {
+			if (biblioteca.getAno()<ano) {
 				cont++;
 			}
 		}
@@ -44,14 +44,10 @@ public class Libro extends Biblioteca implements Prestable{
 		
 	}
 	
-	
-	public boolean isPrestado() {
-		return prestado;
-	}
 
 	public String toString() {
 		
-	return "Codigo:"+getCodigo()+"titulo"+getTitulo()+"a�o"+getA�o()+"prestado"+prestado;
+	return "Codigo:"+getCodigo()+"titulo"+getTitulo()+"a�o"+getAno()+"prestado"+prestado;
 		
 	}	
 	public String getTitulo() {
@@ -60,8 +56,8 @@ public class Libro extends Biblioteca implements Prestable{
 	public int getCodigo() {
 		return codigo;
 	}
-	public int getA�o() {
-		return a�o;
+	public int getAno() {
+		return ano;
 	}
 
 	@Override

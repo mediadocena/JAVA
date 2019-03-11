@@ -1,7 +1,9 @@
 package Ej5;
 
+import Utiles.Salieri;
+
 public interface Calculos {
-	
+	Salieri ex = new Salieri();
 	public double calcularSueldo();
 	
 	public default double retencion() {
@@ -32,13 +34,18 @@ public interface Calculos {
 			}else if(n>3) {
 				gratificacion=300;
 			}
+			
 			return gratificacion;
 		}
 		
+		
 		public default double calcular() {
-			double resta;
+			double sueldo = calcularSueldo();
+			double retencion = (retencion()*sueldo)/100;
+			double total = sueldo-retencion;
+		
 			
-			return 0;
+			return total;
 		}
 	
 }

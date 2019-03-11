@@ -45,5 +45,9 @@ public class Artistas {
 	public void setFechafall(String fechafall) {
 		this.fechafall = fechafall;
 	}
-	
+	@Override
+	public boolean equals(Object obj) {
+		
+		return super.equals(obj);
+	}
 }

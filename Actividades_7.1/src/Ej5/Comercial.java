@@ -11,8 +11,9 @@ public class Comercial extends Empleado{
 
 	@Override
 	public double calcularSueldo() {
+		double a = sueldo+comisionCobrar();
 		
-		return 0;
+		return a;
 	}
 	public double comisionCobrar() {
 		double comision=(importe*10)/100;

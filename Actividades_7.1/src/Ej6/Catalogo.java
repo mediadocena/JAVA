@@ -6,40 +6,66 @@ import Utiles.Salieri;
 
 public class Catalogo {
 	Salieri ex = new Salieri();
-	ArrayList<Obras> a = new ArrayList<Obras>();
+	ArrayList<Obras> a = new ArrayList<Obras>(10);
 	
 	public void anñadeObra() {
 		int opcion=0;
-		do {
+		int inventario=0;
+		
 		System.out.println("¿Que tipo de obra desea introducir?");
 		System.out.println("1-Escultura");
 		System.out.println("2-pintura");
 		opcion=ex.controlaentero();
 		switch (opcion) {
 		case 1:
-			int inventario=ex.controlaenteroSt("Inventario:");
+			
 			a.add(inventario,new Esculturas(ex.controlaStringSt("Titulo:"),inventario,ex.controlaStringSt("Autor:"),ex.controlaenteroSt("Año:"),ex.controlaStringSt("Material:"),ex.controladoubleSt("Altura:")));
 			System.out.println("La obra se ha añadido con éxito");
+			inventario++;
 			break;
 		case 2:
-			inventario=ex.controlaenteroSt("Inventario:");
 			a.add(inventario,new Pinturas(ex.controlaStringSt("Titulo:"),inventario,ex.controlaStringSt("Autor:"),ex.controlaenteroSt("Año:"),ex.controladoubleSt("Ancho:"),ex.controladoubleSt("Alto:"),ex.controlaStringSt("Soporte")));
 			System.out.println("La obra se ha añadido con éxito");
+			inventario++;
 			break;
 		default:
 			System.out.println("Opcion no válida");
 			break;
 		}
-		}while(opcion!=1||opcion!=2);
+		
 		
 	}
 	public void eliminaObra(int inventario) {
-		a.remove(inventario);
-		System.out.println("La obra se ha eliminado");
+		try {
+		for (Obras obras : a) {
+			if(obras.getInventario()==inventario) {
+				a.remove(inventario);
+				System.out.println("La obra se ha eliminado");
+			}else if(a.get(inventario)==null) {
+				System.out.println("La obra no fué encontrada");
+			}
+		}
+		}catch(IndexOutOfBoundsException p) {
+			System.out.println("No se ha encontrado el numero de inventario");
+		}
+		
+		
 	}
 	public void buscarObra(int inventario) {
-		Obras o= a.get(inventario);
-		System.out.println("Obra encontrada:"+" "+o.toString());
+		try {
+		for (Obras obras : a) {
+			if(obras.getInventario()==inventario) {
+				Obras o= a.get(inventario);
+				System.out.println("Obra encontrada:"+" "+o.toString());
+			}else if(a.get(inventario)==null) {
+				System.out.println("La obra no fué encontrada");
+			}
+		}
+		}catch(IndexOutOfBoundsException p) {
+			System.out.println("No se ha encontrado el numero de inventario");
+		}
+		
+		
 	}
 	public double Superficie() {
 		double alt=0;
@@ -75,7 +101,7 @@ public class Catalogo {
 		}
 		
 	}
-		System.out.println("Escultura mas alta:");
+		System.out.println("Escultura mas alta:"+inv);
 		return inv;
    }
 }
