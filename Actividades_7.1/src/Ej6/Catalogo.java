@@ -7,11 +7,9 @@ import Utiles.Salieri;
 public class Catalogo {
 	Salieri ex = new Salieri();
 	ArrayList<Obras> a = new ArrayList<Obras>(10);
-	
+	int inventario=0;
 	public void anñadeObra() {
 		int opcion=0;
-		int inventario=0;
-		
 		System.out.println("¿Que tipo de obra desea introducir?");
 		System.out.println("1-Escultura");
 		System.out.println("2-pintura");
