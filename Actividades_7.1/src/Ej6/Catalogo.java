@@ -72,10 +72,7 @@ public class Catalogo {
 		double an=0;
 		double superficie=0;
 		for (Obras obras : a) {
-			if (obras instanceof Esculturas) {
-				Esculturas e= (Esculturas) obras;
-				alt+=e.getAltura();
-			}else if(obras instanceof Pinturas) {
+			 if(obras instanceof Pinturas) {
 				Pinturas r= (Pinturas) obras;
 				alt+=r.getAlto();
 				an+=r.getAncho();
@@ -95,9 +92,7 @@ public class Catalogo {
 				if(alt>=antalt) {
 					antalt=alt;
 					inv=e.getInventario();
-				}else {
-					alt=antalt;
-				}
+				}	
 		}
 		
 	}

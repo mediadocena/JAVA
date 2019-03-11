@@ -17,12 +17,14 @@ public class Asalariado extends Empleado{
 	}
 
 	@Override
-	public void ingresos() {
+	public double ingresos() {
+		double ingresos= getSalarioSemanal();
 		System.out.println("Ingresos:"+getSalarioSemanal()+", "+"A la semana");
-		
+		return ingresos;
 	}
 
-	public void setSalarioSemanal(double salarioSemanal) {
+	public void setSalarioSemanal() {
+		System.out.println("Introduzca el salario:");
 		this.salarioSemanal = ex.controlapositivo();
 	}
 

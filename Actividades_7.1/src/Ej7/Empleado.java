@@ -40,7 +40,7 @@ public abstract class Empleado {
 		return "Nombre"+":"+" "+getNombre()+","+"Apellido:"+" "+getApellido()+","+"Numero Seguro Social:"+" "+getNumeroSS();
 		
 	}
-	public abstract void ingresos();
+	public abstract double ingresos();
 	
 	
 }
