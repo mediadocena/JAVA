@@ -1,24 +1,33 @@
 package Ej4;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Revista extends Biblioteca{
 	
-	int numero;
+	private int numero;
 	
-	Revista(int numero,int codigo,String titulo,int año){
-		super(codigo,titulo,año);
+	Revista(int numero,int codigo,String titulo,int aï¿½o){
+		super(codigo,titulo,aï¿½o);
 		this.numero=numero;
 	}
 
-
-	public void publicacionesAnterioresA(Biblioteca a,int año) {
-		
-		
+	
+	public int publicacionesAnterioresA(List<Biblioteca> a,int aï¿½o) {
+		int cont=0;
+		for (Biblioteca biblioteca : a) {
+			if (biblioteca.getAï¿½o()<aï¿½o) {
+				cont++;
+			}
+		}
+		return cont;
 		
 	}
 	
+	
 	public String toString() {
 		
-	return "Codigo:"+codigo+"titulo"+titulo+"año"+año+"numero"+numero;
+	return "Codigo:"+codigo+"titulo"+titulo+"aï¿½o"+aï¿½o+"numero"+numero;
 		
 	}
 
@@ -32,7 +41,7 @@ public class Revista extends Biblioteca{
 	public int getCodigo() {
 		return codigo;
 	}
-	public int getAño() {
-		return año;
+	public int getAï¿½o() {
+		return aï¿½o;
 	}
 }

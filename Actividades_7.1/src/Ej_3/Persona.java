@@ -2,10 +2,10 @@ package Ej_3;
 
 public abstract class Persona implements Humano {
 	
-	String nombre;
-	String apellidos;
-	String nif;
-	String direccion;
+	private String nombre;
+	private String apellidos;
+	private String nif;
+	private String direccion;
 	
 	Persona(){
 		

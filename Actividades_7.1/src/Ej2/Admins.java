@@ -2,8 +2,8 @@ package Ej2;
 
 public final class Admins extends Usuario{
 	
-	int papelera;
-	int bans;
+	private int papelera;
+	private int bans;
 	
 	public Admins(int mensajes, String correo,String nick) {
 		super(mensajes,correo,nick);

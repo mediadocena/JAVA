@@ -2,18 +2,40 @@ package Ej4;
 
 public abstract class Biblioteca {
 		
-	int codigo;
-	String titulo;
-	int año;
+	protected int codigo;
+	protected String titulo;
+	protected int aï¿½o;
 	
-	Biblioteca(int codigo,String titulo,int año){
+	Biblioteca(int codigo,String titulo,int aï¿½o){
 		this.codigo=codigo;
 		this.titulo=titulo;
-		this.año=año;
+		this.aï¿½o=aï¿½o;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public int getAï¿½o() {
+		return aï¿½o;
+	}
+
+	public void setAï¿½o(int aï¿½o) {
+		this.aï¿½o = aï¿½o;
 	}
 	
-	
-	abstract public void publicacionesAnterioresA(Biblioteca a,int año);
 	
  	
 }

@@ -1,38 +1,46 @@
 package Ej4;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Libro extends Biblioteca implements Prestable{
 	
 	boolean prestado;
 	
-	Libro(int codigo,String titulo,int año){
+	Libro(int codigo,String titulo,int aï¿½o){
 		
-		super(codigo,titulo,año);
+		super(codigo,titulo,aï¿½o);
 		prestado=false;
 		
 	}
 
 	
-	public void cuentaPrestados(ArrayList<Biblioteca> a) {
-		int contador=0;
+	public int cuentaPrestados(List<Biblioteca> a) {
+		int cont=0;
 		for (Biblioteca biblioteca : a) {
-			if (a instanceof Libro) {
-				Libro c = (Libro) b;
-				if (((Libro) b).isPrestado()) {
-					contador++;
+			if (biblioteca instanceof Libro) {
+				if (((Libro)biblioteca).isPrestado()==true) {
+					cont++;
 				}
 			}
 		}
-		System.out.println("Libros prestados:"+" "+contador);
+		return cont;
 		
 	}
 
-	@Override
-	public void publicacionesAnterioresA(Biblioteca a,int año) {
-		
-		
+	
+	public boolean isPrestado() {
+		return prestado;
+	}
+
+
+	public int publicacionesAnterioresA(List<Biblioteca> a,int aï¿½o) {
+		int cont=0;
+		for (Biblioteca biblioteca : a) {
+			if (biblioteca.getAï¿½o()<aï¿½o) {
+				cont++;
+			}
+		}
+		return cont;
 		
 	}
 	
@@ -43,7 +51,7 @@ public class Libro extends Biblioteca implements Prestable{
 
 	public String toString() {
 		
-	return "Codigo:"+codigo+"titulo"+titulo+"año"+año+"prestado"+prestado;
+	return "Codigo:"+getCodigo()+"titulo"+getTitulo()+"aï¿½o"+getAï¿½o()+"prestado"+prestado;
 		
 	}	
 	public String getTitulo() {
@@ -52,25 +60,35 @@ public class Libro extends Biblioteca implements Prestable{
 	public int getCodigo() {
 		return codigo;
 	}
-	public int getAño() {
-		return año;
+	public int getAï¿½o() {
+		return aï¿½o;
 	}
 
 	@Override
 	public void Prestar() {
-		
-		
+		setPrestado(true);
+		System.out.println("Libro prestado");
 	}
 
 	@Override
 	public void Devolver() {
-		
+		setPrestado(false);
+		System.out.println("Libro devuelto");
 		
 	}
 
 	@Override
 	public void Prestado() {
-		
+		if (isPrestado()==true) {
+			System.out.println("El libro estï¿½ prestado");
+		}else {System.out.println("El libro no esta prestado");}
 		
 	}
+
+
+	public void setPrestado(boolean prestado) {
+		this.prestado = prestado;
+	}
+
+	
 }

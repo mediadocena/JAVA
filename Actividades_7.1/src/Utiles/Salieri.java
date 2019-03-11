@@ -51,6 +51,21 @@ public class Salieri {
 		}while(válido==false);
 	return nif;
 	}
+	public double controladoubleSt(String str){
+		System.out.println(str);
+		 boolean exc = true;
+		double a=0;
+		 do {
+			try {
+			a=teclado.nextDouble();
+			exc = false;
+				}catch(Exception e){
+					teclado.nextLine();
+					System.out.println("ERROR, introduzca un numero");
+					}
+				}while(exc);
+		 return a;
+	}
 	
 	/**
 	 * Muestra un mensaje en pantalla y lee un numero entero por teclado  controlando las exepciones.

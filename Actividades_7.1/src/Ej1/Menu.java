@@ -8,7 +8,7 @@ import Utiles.Salieri;
 public final class Menu {
 	Salieri ex = new Salieri();
 	List <Cuenta> h=new ArrayList<Cuenta>();
-	int opcion ;
+	private int opcion ;
 	
  public void Vmenu() {
 	 int contador=0;
