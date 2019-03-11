@@ -7,6 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		List<Biblioteca> a = new ArrayList<Biblioteca>();
+		//Añadimos libros y revistas
 		a.add(new Libro(1,"La boca del miedo",1989));
 		a.add(new Libro(2,"En las montañas de la locura",1925));
 		a.add(new Revista(1,3,"La cosa",1990));

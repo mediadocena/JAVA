@@ -12,7 +12,12 @@ public class Revista extends Biblioteca{
 		this.numero=numero;
 	}
 
-	
+	/**
+	 * Calcula las publicaciones anteriores al introducido por parámetro
+	 * @param a
+	 * @param ano
+	 * @return
+	 */
 	public int publicacionesAnterioresA(List<Biblioteca> a,int ano) {
 		int cont=0;
 		for (Biblioteca biblioteca : a) {

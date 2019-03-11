@@ -4,6 +4,7 @@ package Ej2;
 public class Test {
 
 	public static void main(String[] args) {
+		//Probamos las clases
 		Usuario a = new Usuario(1, "abcd@hotmail.com","cde");
 		a.InnumeroMensajes();
 		a.DenumeroMensajes();

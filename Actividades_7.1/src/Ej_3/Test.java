@@ -6,7 +6,7 @@ import java.util.List;
 import Utiles.Salieri;
 
 public class Test {
-
+//Metodo que inicializa el menu
 	public void Menu() {
 		Salieri ex = new Salieri();
 		List <Persona> a = new ArrayList<Persona>();

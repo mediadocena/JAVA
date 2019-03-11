@@ -9,7 +9,7 @@ public final class Menu {
 	Salieri ex = new Salieri();
 	List <Cuenta> h=new ArrayList<Cuenta>();
 	private int opcion ;
-	
+	//Metodo que inicia el menu
  public void Vmenu() {
 	 int contador=0;
 	 do {

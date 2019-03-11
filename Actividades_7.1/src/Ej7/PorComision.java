@@ -14,6 +14,10 @@ public class PorComision extends Empleado{
 	public double getVentas() {
 		return ventas;
 	}
+	
+	public double getVentab() {
+		return ventab;
+	}
 
 	public void setVentas(double ventas) {
 		this.ventas = ventas;
@@ -24,6 +28,11 @@ public class PorComision extends Empleado{
 		double total = ventas+ventab;
 		return total;
 	}
-	 
+	public String toString() {
+		return "Nombre"+":"+" "+getNombre()+","+"Apellido:"+
+	" "+getApellido()+","+"Numero Seguro Social:"+
+				" "+getNumeroSS()+", "+"Ventas: "+getVentas()+" Ventas brutas: "+getVentab();
+		
+	}
 	
 }

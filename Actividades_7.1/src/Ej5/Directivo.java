@@ -30,7 +30,7 @@ public class Directivo extends Empleado{
 	public void setComision(double comision) {
 		this.comision = comision;
 	}
-
+	//Metodo que calcula el sueldo del directivo
 	@Override
 	public double calcularSueldo() {
 		double calc= sueldo+comision;

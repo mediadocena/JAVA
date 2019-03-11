@@ -27,5 +27,9 @@ public class Asalariado extends Empleado{
 		System.out.println("Introduzca el salario:");
 		this.salarioSemanal = ex.controlapositivo();
 	}
-
+	@Override
+	public String toString() {
+		return "Nombre"+":"+" "+getNombre()+","+"Apellido:"+" "+getApellido()+","+"Numero Seguro Social:"+" "+getNumeroSS()+", "+"Salario Semanal"+getSalarioSemanal();
+		
+	}
 }

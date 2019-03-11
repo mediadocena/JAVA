@@ -8,6 +8,7 @@ public class Test {
 	public static void main(String[] args) {
 		
 		List<Biblioteca> a = new ArrayList<Biblioteca>();
+		//Añadimos libros y revistas a la lista
 		a.add(1,new Libro(1,"La llamada de Cthulhu",1925));
 		a.add(2,new Libro(2,"Nyarlatothep",1926));
 		a.add(3,new Revista(1,123,"EL coso",2015));

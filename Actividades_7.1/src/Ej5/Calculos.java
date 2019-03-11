@@ -5,7 +5,10 @@ import Utiles.Salieri;
 public interface Calculos {
 	Salieri ex = new Salieri();
 	public double calcularSueldo();
-	
+	/**
+	 * Calcular la retencion 
+	 * @return
+	 */
 	public default double retencion() {
 		double porcentaje=0;
 		double sueldob = calcularSueldo();

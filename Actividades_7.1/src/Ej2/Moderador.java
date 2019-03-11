@@ -9,7 +9,7 @@ public final class Moderador extends Usuario {
 		this.papelera=0;
 		
 	}
-	
+	//Aumenta la papelera
 	public void papeleraInc() {
 		papelera++;
 		System.out.println("Numero de elementos en la papelera:"+papelera);

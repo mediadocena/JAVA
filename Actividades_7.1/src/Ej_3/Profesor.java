@@ -7,6 +7,7 @@ public class Profesor extends Persona{
 	Profesor(){
 		
 	}
+	
 	Profesor(int despacho,String nombre,String apellidos,String nif,String direccion){
 		super(nombre,apellidos,nif,direccion);
 		this.despacho=despacho;

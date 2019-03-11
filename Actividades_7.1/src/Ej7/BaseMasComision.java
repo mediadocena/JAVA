@@ -1,30 +1,32 @@
 package Ej7;
 
-public class BaseMasComision extends Empleado{
+public class BaseMasComision extends PorComision{
 	
-	double ventasb;
+	
+
+	double ventab;
 	double tarifa;
 	double salariob;
 	
-	BaseMasComision(String nombre, String apellido, int numeroSS,double ventasb,double tarifa, double salariob) {
-		super(nombre, apellido, numeroSS);
+	BaseMasComision(String nombre, String apellido, int numeroSS, double ventas, double salariob,double tarifa) {
+		super(nombre, apellido, numeroSS, ventas, salariob);
 		this.salariob=salariob;
 		this.tarifa=tarifa;
-		this.ventasb=ventasb;
 	}
-
+	
+	//metodo para calcular el sueldo total
 	@Override
 	public double ingresos() {
-		double total = (tarifa*ventasb)+salariob;
+		double total = (tarifa*ventas)+salariob;
 		return total;
 	}
 
-	public double getVentasb() {
-		return ventasb;
+	public double getSalariob() {
+		return salariob;
 	}
 
-	public void setVentasb(double ventasb) {
-		this.ventasb = ventasb;
+	public void setVentasb(double ventas) {
+		this.salariob = ventas;
 	}
 
 	public double getTarifa() {
@@ -35,13 +37,14 @@ public class BaseMasComision extends Empleado{
 		this.tarifa = tarifa;
 	}
 
-	public double getSalariob() {
-		return salariob;
-	}
-
 	public void setSalariob(double salariob) {
 		this.salariob = salariob;
 	}
-	
+	public String toString() {
+		return "Nombre"+":"+" "+getNombre()+","+"Apellido:"+" "+
+	getApellido()+","+"Numero Seguro Social:"+" "+getNumeroSS()+
+	", "+"Ventas:"+" "+getVentas()+" salario base: "+getSalariob()+" Tarifa: "+getTarifa();
+		
+	}
 
 }

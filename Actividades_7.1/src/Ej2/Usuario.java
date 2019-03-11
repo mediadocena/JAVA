@@ -7,21 +7,23 @@ public  class Usuario {
 	private int mensajes;
 	private String correo;
 	private String nick;
-	
+	//Constructor de la clase
 	Usuario(int mensajes, String correo,String nick){
 		this.mensajes=mensajes;
 		this.correo=correo;
 		this.nick=nick;
 	}
-	
+	//Aumenta el numero de mensajes
 	public void InnumeroMensajes() {
 		mensajes++;
 		System.out.println("Numero de mensajes actuales:"+mensajes);
 	}
+	//Decrementa el numero de mensajes
 	public void DenumeroMensajes() {
 		mensajes--;
 		System.out.println("Numero de mensajes actuales:"+mensajes);
 	}
+	//Modifica el correo
 	public void modifiCorreo() {
 		correo = ex.controlaStringSt("Introduce el nuevo correo:");
 		System.out.println("Correo:"+correo);

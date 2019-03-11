@@ -1,0 +1,463 @@
+<?xml version="1.0" standalone="yes" ?>
+<diagram>
+    <title>Untitled</title>
+    <DiagramType>Class Diagram</DiagramType>
+    <Version>3.2</Version>
+    <valuesFileName />
+    <elements num="9">
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>2</objId>
+            <ptul X="113" Y="330" />
+            <ptdr X="228" Y="446" />
+            <links num="1">
+                <link id="8" />
+            </links>
+            <name>PorHoras</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="2">
+                <attribute>
+                    <name>SueldoPorHoras</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>HorasTrabajadas</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="3">
+                <operation>
+                    <name>Set</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Get</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Calcular</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>0</objId>
+            <ptul X="231" Y="48" />
+            <ptdr X="396" Y="196" />
+            <links num="3">
+                <link id="7" />
+                <link id="8" />
+                <link id="9" />
+            </links>
+            <name>Empleado</name>
+            <stereotype>virtual</stereotype>
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="3">
+                <attribute>
+                    <name>Nombre</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>Apellido</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>Numero Seguridad Social</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="3">
+                <operation>
+                    <name>Get</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Set</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>toString</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>3</objId>
+            <ptul X="400" Y="329" />
+            <ptdr X="503" Y="461" />
+            <links num="2">
+                <link id="9" />
+                <link id="11" />
+            </links>
+            <name>PorComision</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="2">
+                <attribute>
+                    <name>VentasBrutas</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>TarifaComision</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="4">
+                <operation>
+                    <name>Get</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Set</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>toString</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Calcular</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>1</objId>
+            <ptul X="265" Y="330" />
+            <ptdr X="376" Y="430" />
+            <links num="1">
+                <link id="7" />
+            </links>
+            <name>Asalariado</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="1">
+                <attribute>
+                    <name>Salario semanal</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="3">
+                <operation>
+                    <name>Set</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Get</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Ingresos</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>7</objId>
+            <points num="2">
+                <pt x="320" y="330" />
+                <pt x="313" y="196" />
+            </points>
+            <objStart id="1" />
+            <objEnd id="0" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>8</objId>
+            <points num="2">
+                <pt x="170" y="330" />
+                <pt x="313" y="196" />
+            </points>
+            <objStart id="2" />
+            <objEnd id="0" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>9</objId>
+            <points num="2">
+                <pt x="446" y="329" />
+                <pt x="313" y="196" />
+            </points>
+            <objStart id="3" />
+            <objEnd id="0" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>11</objId>
+            <points num="2">
+                <pt x="451" y="546" />
+                <pt x="451" y="461" />
+            </points>
+            <objStart id="4" />
+            <objEnd id="3" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>4</objId>
+            <ptul X="389" Y="546" />
+            <ptdr X="514" Y="694" />
+            <links num="1">
+                <link id="11" />
+            </links>
+            <name>BaseMasComision</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="3">
+                <attribute>
+                    <name>VentasBrutas</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>TarifaComision</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>SalarioBase</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Unspec</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="4">
+                <operation>
+                    <name>Get</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Set</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>Calcular</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>toString</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Unspec</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+    </elements>
+</diagram>

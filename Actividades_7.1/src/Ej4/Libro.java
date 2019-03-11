@@ -13,7 +13,11 @@ public class Libro extends Biblioteca implements Prestable{
 		
 	}
 
-	
+	/**
+	 * Cuenta el numero de prestados
+	 * @param a
+	 * @return
+	 */
 	public int cuentaPrestados(List<Biblioteca> a) {
 		int cont=0;
 		for (Biblioteca biblioteca : a) {
@@ -32,7 +36,12 @@ public class Libro extends Biblioteca implements Prestable{
 		return prestado;
 	}
 
-
+	/**
+	 * Cuenta las publicaciones anteriores al valor pasado por parámetro
+	 * @param a
+	 * @param ano
+	 * @return
+	 */
 	public int publicacionesAnterioresA(List<Biblioteca> a,int ano) {
 		int cont=0;
 		for (Biblioteca biblioteca : a) {
@@ -47,7 +56,7 @@ public class Libro extends Biblioteca implements Prestable{
 
 	public String toString() {
 		
-	return "Codigo:"+getCodigo()+"titulo"+getTitulo()+"aï¿½o"+getAno()+"prestado"+prestado;
+	return "Codigo:"+getCodigo()+"titulo"+getTitulo()+"ano"+getAno()+"prestado"+prestado;
 		
 	}	
 	public String getTitulo() {

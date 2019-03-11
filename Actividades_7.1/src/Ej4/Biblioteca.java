@@ -5,7 +5,7 @@ public abstract class Biblioteca {
 	protected int codigo;
 	protected String titulo;
 	protected int ano;
-	
+	//Constructor de la clase
 	Biblioteca(int codigo,String titulo,int ano){
 		this.codigo=codigo;
 		this.titulo=titulo;
